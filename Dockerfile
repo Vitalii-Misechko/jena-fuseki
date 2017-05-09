@@ -69,4 +69,4 @@ RUN     wget -O fuseki.tar.gz $FUSEKI_MIRROR/jena/binaries/apache-jena-fuseki-$F
 WORKDIR /jena-fuseki
 EXPOSE 3030
 # ENTRYPOINT ["/docker-entrypoint.sh"]
-# CMD ["/jena-fuseki/fuseki-server"]
+CMD ["/jena-fuseki/fuseki-server"]
