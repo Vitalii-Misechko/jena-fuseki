@@ -34,6 +34,8 @@ ENV FUSEKI_ARCHIVE http://archive.apache.org/dist/
 VOLUME /fuseki
 ENV FUSEKI_BASE /fuseki
 
+## WORKAROUND change date after changing shiro.ini
+# ARG CACHE_DATE=2017-01-03
 
 # Installation folder
 ENV FUSEKI_HOME /jena-fuseki
@@ -54,7 +56,8 @@ RUN     wget -O fuseki.tar.gz $FUSEKI_MIRROR/jena/binaries/apache-jena-fuseki-$F
 # As "localhost" is often inaccessible within Docker container,
 # we'll enable basic-auth with a random admin password
 # (which we'll generate on start-up)
-# COPY shiro.ini /jena-fuseki/shiro.ini
+COPY shiro.ini /jena-fuseki/shiro.ini
+COPY shiro.ini /fuseki/shiro.ini
 # COPY docker-entrypoint.sh /
 # RUN chmod 755 /docker-entrypoint.sh
 
