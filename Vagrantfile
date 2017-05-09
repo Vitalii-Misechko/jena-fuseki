@@ -21,5 +21,5 @@ Vagrant.configure(2) do |config|
   end
   config.vm.network :forwarded_port, guest: 3030, host: 3030
   config.vm.provision :docker
-  config.vm.provision :docker_compose, yml: "/vagrant/vagrant-docker-compose.yml", rebuild: true, run: "always"
+  config.vm.provision :docker_compose, yml: "/vagrant/docker-compose.yml", rebuild: true, run: "always"
 end
