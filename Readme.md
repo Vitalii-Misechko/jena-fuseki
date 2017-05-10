@@ -1,11 +1,12 @@
-# VM for Apacke Jena + Fuseki
+# Vagrant files for Apache Jena + Fuseki
 
-This repo is aimed to help spinning up VM with Jena + Fuseki installed. It runs fusekin on 3030 port with. Credentials:
+This repo is aimed to help spinning up VM with Jena + Fuseki installed on local computer. It runs fuseki on 3030 port. 
+Credentials:
 
 * login: admin
 * password: pw
 
-Backups are available in host under `/fuseki/backups` folder.
+Backups are available in the host VM under `/fuseki/backups` folder.
 
 ## Installation
 
