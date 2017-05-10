@@ -1,4 +1,4 @@
-# Apacke Jena + Fuseki
+# VM for Apacke Jena + Fuseki
 
 This repo is aimed to help spinning up VM with Jena + Fuseki installed. It runs fusekin on 3030 port with. Credentials:
 
@@ -19,9 +19,21 @@ vagrant up
 ```
 You might see an error like below. Ignore it
 ```
-    Stderr: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock
+Stderr: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock
 ```
 4. Execute following command once again
 ```
 vagrant up
 ```
+
+## Clean up
+
+1. Execute
+```
+vagrant destroy
+```
+2. Execute 
+```
+vagrant global-status
+```
+Follow output instructions
